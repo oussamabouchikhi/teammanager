@@ -12,9 +12,9 @@ class Player(models.Model):
     number = models.IntegerField()
     age = models.IntegerField()
     position_in_field = models.CharField(max_length=256,
-                                         choices=({'1': 'حارس', '2': 'مدافع', '3': 'وسط', '4': 'مهاجم'}))
+                                         choices=(('1', 'حارس'), ('2', 'مدافع'), ('3', 'وسط'), ('4', 'مهاجم')))
     is_captain = models.BooleanField(default=False)
-    team = models.ForeignKey(Team)
+    team = models.ForeignKey(Team, on_delete=models.DO_NOTHING)
 
 
 class GameScore(models.Model):

@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
 from django.views import View
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from teams.models import Team, GameScore
 
@@ -33,3 +33,15 @@ class ScoresListView(ListView):
     model = GameScore
     template_name = 'scores_list.html'
     context_object_name = 'scores'
+
+
+class TeamDetailsView(DetailView):
+    model = Team
+    template_name = 'team_details.html'
+    context_object_name = 'team'
+
+
+class PlayerDetailsView(DetailView):
+    model = Team
+    template_name = 'player_details.html'
+    context_object_name = 'player'

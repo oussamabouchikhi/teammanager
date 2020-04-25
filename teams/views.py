@@ -5,7 +5,8 @@ from django.http import HttpResponse
 from django.views import View
 from django.views.generic import ListView
 
-from teams.models import Team
+from teams.models import Team, GameScore
+
 
 # Render teams using View class
 class HomePageView(View):
@@ -26,3 +27,9 @@ class TeamsListView(ListView):
     template_name = 'teams_list.html'
     # Send all teams to template as teams
     context_object_name = 'teams'
+
+
+class ScoresListView(ListView):
+    model = GameScore
+    template_name = 'scores_list.html'
+    context_object_name = 'scores'

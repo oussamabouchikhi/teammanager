@@ -17,9 +17,10 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
 
-from teams.views import HomePageView
+from teams.views import HomePageView, TeamsListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', HomePageView.as_view(), name="home-page"),
+    url(r'^teams/$', TeamsListView.as_view(), name="teams-list-view"),
 ]

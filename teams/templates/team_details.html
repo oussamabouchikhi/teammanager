@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>تفاصيل الفريق</title>
+</head>
+<body>
+
+    <h2>{{ team.name }}</h2>
+    <p>{{ team.details }}</p>
+
+    {% for player in player_set.all %}
+        <h3>{{ player.name }}</h3>
+    {% endfor %}
+
+</body>
+</html>

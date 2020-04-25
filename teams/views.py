@@ -4,7 +4,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
 
+from teams.models import Team
+
 
 class HomePageView(View):
     def get(self, request):
-        return HttpResponse("مرحبا بك في الصفحة الرئيسية")
+        # get all teams from database
+        teams = Team.objects.all()
+        return HttpResponse(teams)

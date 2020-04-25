@@ -6,6 +6,9 @@ class Team(models.Model):
     name = models.CharField(max_length=256, unique=True)
     details = models.TextField()
 
+    def __str__(self):
+        return self.name
+
 
 class Player(models.Model):
     name = models.CharField(max_length=256)

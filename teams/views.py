@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.views import View
 from django.views.generic import ListView, DetailView
 
-from teams.models import Team, GameScore
+from teams.models import Team, GameScore, Player
 
 
 # Render teams using View class
@@ -42,6 +42,6 @@ class TeamDetailsView(DetailView):
 
 
 class PlayerDetailsView(DetailView):
-    model = Team
+    model = Player
     template_name = 'player_details.html'
     context_object_name = 'player'

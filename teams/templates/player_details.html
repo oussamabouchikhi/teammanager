@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
 
     {% if player.is_captain %}
         <h2> {{ player.name }} قائد {{ player.team }} </h2>
@@ -12,9 +12,4 @@
     <h3> {{ player.age }} عمر اللاعب </h3>
     <h3> الموقع {{ player.get_position_in_field_display }} </h3>
 
-</body>
-<head>
-    <meta charset="UTF-8">
-    <title>تفاصيل اللاعب</title>
-</head>
-</html>
+{% endblock %}

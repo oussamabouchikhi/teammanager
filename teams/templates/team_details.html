@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>تفاصيل الفريق</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
 
     <h2>{{ team.name }}</h2>
     <p>{{ team.details }}</p>
@@ -13,5 +9,4 @@
         <h3>{{ player.name }}</h3>
     {% endfor %}
 
-</body>
-</html>
+{% endblock %}

@@ -17,11 +17,21 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
 
-from teams.views import HomePageView, TeamsListView, ScoresListView
+from teams.views import HomePageView, TeamsListView, ScoresListView, PlayerDetailsView, TeamDetailsView
+
+# Regular expression
+# -     : case sensitive A != a
+# \w    : alphabets, numbers & _ [A-Za-z0-9_]
+# \x20  : an accept a space
+# +     : compare all characters(digits)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', HomePageView.as_view(), name="home-page"),
     url(r'^teams/$', TeamsListView.as_view(), name="teams-list-view"),
     url(r'^scores/$', ScoresListView.as_view(), name="scores-list-view"),
+
+    url(r'^player/(?P<slug>[-\w\x20]+)/$', PlayerDetailsView.as_view(), name="player-details-view"),
+    url(r'^team/(?P<slug>[-\w\x20]+)/$', TeamDetailsView.as_view(), name="team-details-view"),
+
 ]

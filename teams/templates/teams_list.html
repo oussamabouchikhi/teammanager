@@ -4,8 +4,11 @@
 
 {% block content %}
 
+
     {% for team in teams %}
-        <h2> {{ team.name }} </h2>
+        <a href="/team/{{ team.name }}">
+            <h2> {{ team.name }} </h2>
+        </a>
         <p> {{ team.details }} </p>
     {% endfor %}
 

@@ -39,9 +39,11 @@ class TeamDetailsView(DetailView):
     model = Team
     template_name = 'team_details.html'
     context_object_name = 'team'
+    slug_field = 'name'
 
 
 class PlayerDetailsView(DetailView):
     model = Player
     template_name = 'player_details.html'
     context_object_name = 'player'
+    slug_field = 'name'

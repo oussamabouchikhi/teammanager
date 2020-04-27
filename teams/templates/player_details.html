@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
+
+    <img src="{% static 'images/ic_player.png' %}" alt="">
 
     {% if player.is_captain %}
         <h2> {{ player.name }} قائد {{ player.team }} </h2>

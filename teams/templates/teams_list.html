@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %} قائمة الفرق {% endblock %}
 
 {% block content %}
 
+    <img src="{% static 'images/ic_teams_list.png' %}" alt="">
 
     {% for team in teams %}
         <a href="/team/{{ team.name }}">

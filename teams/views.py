@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.views import View
 from django.views.generic import ListView, DetailView
 
+from teams.forms import TeamForm
 from teams.models import Team, GameScore, Player
 
 
@@ -47,3 +48,10 @@ class PlayerDetailsView(DetailView):
     template_name = 'player_details.html'
     context_object_name = 'player'
     slug_field = 'name'
+
+
+class AddTeamView(View):
+    def get(self, request):
+        form = TeamForm()
+        context = {'form': form}
+        return render(request, 'add_team.html', context)

@@ -7,6 +7,10 @@
     <img class="icon-width" src="{% static 'images/ic_game_score.png' %}" alt="">
     {% for score in scores %}
         <div align="center">
+            <!-- Didplay the date just once in the page -->
+            {% ifchanged %}
+                <h2> {{ score.game_date|date:'d-m-Y' }} و </h2>
+            {% endifchanged %}
             <h2> نتيجة مباراة {{ score.first_team }} و {{ score.second_team }} </h2>
             <h3> {{ score.first_team_score }} - {{ score.second_team_score }} </h3>
         </div>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <title> {% block title %} نظام إدارة فرق كرة القدم {% endblock %} </title>
@@ -9,7 +10,7 @@
     <!-- Bootstrap Latest compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
 </head>
-<body dir="rtl">
+<body dir="rtl" style="background-image: url({% static 'images/bg_pattern.png' %})">
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

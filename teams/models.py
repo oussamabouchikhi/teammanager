@@ -31,6 +31,7 @@ class GameScore(models.Model):
     second_team = models.CharField(max_length=256)
     first_team_score = models.IntegerField(default=0)
     second_team_score = models.IntegerField(default=0)
+    game_date = models.DateTimeField(auto_now=True)
 
     # example: ليفربول 0 - 3 ريال مدريد
     def __str__(self):

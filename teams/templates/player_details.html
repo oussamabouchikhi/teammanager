@@ -3,7 +3,7 @@
 
 {% block content %}
 
-    <img src="{% static 'images/ic_player.png' %}" alt="">
+    <img class="icon-width" src="{% static 'images/ic_player.png' %}" alt="">
 
     {% if player.is_captain %}
         <h2> {{ player.name }} قائد {{ player.team }} </h2>

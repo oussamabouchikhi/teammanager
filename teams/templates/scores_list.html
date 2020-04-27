@@ -4,7 +4,7 @@
 {% block title %} نتائج المباريات {% endblock %}
 
 {% block content %}
-    <img src="{% static 'images/ic_game_score.png' %}" alt="">
+    <img class="icon-width" src="{% static 'images/ic_game_score.png' %}" alt="">
     {% for score in scores %}
         <div align="center">
             <h2> نتيجة مباراة {{ score.first_team }} و {{ score.second_team }} </h2>

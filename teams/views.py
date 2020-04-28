@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 from django.http import HttpResponse
@@ -51,7 +51,23 @@ class PlayerDetailsView(DetailView):
 
 
 class AddTeamView(View):
+
     def get(self, request):
         form = TeamForm()
         context = {'form': form}
         return render(request, 'add_team.html', context)
+
+    def post(self, request):
+        form = TeamForm(request.POST)
+        # if form data are valid
+        if form.is_valid():
+            team = Team()
+            # update data from request
+            team.name = form.cleaned_data['name']
+            team.details = form.cleaned_data['details']
+            team.save()  # save data
+            return redirect('/')  # redirect to home after saving
+        # if form data are not valid
+        else:
+            # recall get method with request to re-display form
+            return self.get(request)

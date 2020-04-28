@@ -1,3 +1,4 @@
+from django.db import IntegrityError
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -65,8 +66,12 @@ class AddTeamView(View):
             # update data from request
             team.name = form.cleaned_data['name']
             team.details = form.cleaned_data['details']
-            team.save()  # save data
-            return redirect('/')  # redirect to home after saving
+            try:
+                team.save()  # save data
+                return redirect('/')  # redirect to home after saving
+            except IntegrityError:
+                context = {'form': form, 'error_msg': 'عذرا هذا الاسم مكرر, يرجى تغيير الاسم'}
+                return render(request, 'add_team.html', context)
         # if form data are not valid
         else:
             # recall get method with request to re-display form

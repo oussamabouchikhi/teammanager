@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 
 {% block title %} اضافة فريق {% endblock %}
+
+{% if error_msg %}
+    <h4 class="alert alert-danger">{{ error_msg }}</h4>
+{% endif %}
+
 {% block content %}
     <form action="/add_team/" method="post">
         {% csrf_token %}

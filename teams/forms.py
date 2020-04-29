@@ -18,3 +18,9 @@ class TeamModelForm(ModelForm):
             'name': 'اسم الفريق',
             'details': 'تفاصيل الفريق',
         }
+
+        error_messages = {
+            'name': {
+                'unique': 'عذرا هذا الاسم مكرر, يرجى تغيير الاسم',
+            }
+        }

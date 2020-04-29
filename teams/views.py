@@ -62,13 +62,9 @@ class AddTeamView(View):
         form = TeamModelForm(request.POST)
         # if form data are valid
         if form.is_valid():
-            try:
-                form.save()  # save data
-                return redirect('/')  # redirect to home after saving
-            except IntegrityError:
-                context = {'form': form, 'error_msg': 'عذرا هذا الاسم مكرر, يرجى تغيير الاسم'}
-                return render(request, 'add_team.html', context)
+            form.save()  # save data
+            return redirect('/')  # redirect to home after saving
         # if form data are not valid
         else:
-            # recall get method with request to re-display form
-            return self.get(request)
+            context = {'form': form}
+            return render(request, 'add_team.html', context)

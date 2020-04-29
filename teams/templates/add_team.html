@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
-
+{% load crispy_forms_tags %}
 {% block title %} اضافة فريق {% endblock %}
 
 {% block content %}
     <form action="/add_team/" method="post">
         {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="اضافة">
+        {{ form|crispy }}
     </form>
 {% endblock %}

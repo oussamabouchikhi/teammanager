@@ -1,5 +1,6 @@
 from django import forms
 from django.forms import ModelForm
+from crispy_forms import layout
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 
@@ -15,7 +16,7 @@ class TeamModelForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super(TeamModelForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper(self)
-        self.helper = layout.append(Submit('submit', 'اضافة'))
+        self.helper.add_input(Submit('submit', 'اضافة'))
 
     class Meta:
         model = Team

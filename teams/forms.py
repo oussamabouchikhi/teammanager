@@ -11,6 +11,10 @@ class TeamForm(forms.Form):
 
 class TeamModelForm(ModelForm):
     class Meta:
-        team = Team()
+        model = Team
         # fields = ['name', 'details']
-        fields = ['__all__']
+        fields = '__all__'
+        labels = {
+            'name': 'اسم الفريق',
+            'details': 'تفاصيل الفريق',
+        }

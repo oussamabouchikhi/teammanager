@@ -7,14 +7,14 @@
     <div align="center">
         <img class="icon-width" src="{% static 'images/ic_game_score.png' %}" alt="">
     </div>
-    <div>
+    <div align="center">
         {% include 'add_score.html' %}
     </div>
     {% for score in scores %}
         <div align="center">
             <!-- Didplay the date just once in the page -->
             {% ifchanged %}
-                <h2> {{ score.game_date|date:'d-m-Y' }} و </h2>
+                <h2> {{ score.game_date|date:'d-m-Y' }} </h2>
             {% endifchanged %}
             <h2> نتيجة مباراة {{ score.first_team_relation.name }} و {{ score.second_team_relation.name }} </h2>
             <h3> {{ score.first_team_score }} - {{ score.second_team_score }} </h3>

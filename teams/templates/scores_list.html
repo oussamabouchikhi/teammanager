@@ -4,7 +4,12 @@
 {% block title %} نتائج المباريات {% endblock %}
 
 {% block content %}
-    <img class="icon-width" src="{% static 'images/ic_game_score.png' %}" alt="">
+    <div align="center">
+        <img class="icon-width" src="{% static 'images/ic_game_score.png' %}" alt="">
+    </div>
+    <div>
+        {% include 'add_score.html' %}
+    </div>
     {% for score in scores %}
         <div align="center">
             <!-- Didplay the date just once in the page -->

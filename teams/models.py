@@ -2,6 +2,9 @@ from django.db import models
 
 
 # Create your models here.
+from django.db.models import DO_NOTHING
+
+
 class Team(models.Model):
     name = models.CharField(max_length=256, unique=True)
     details = models.TextField()
@@ -27,8 +30,8 @@ class Player(models.Model):
 
 
 class GameScore(models.Model):
-    first_team_relation = models.ForeignKey(Team, related_name='first_team', null=True)
-    second_team_relation = models.ForeignKey(Team, related_name='second_team', null=True)
+    first_team_relation = models.ForeignKey(Team, related_name='first_team', null=True, on_delete=DO_NOTHING)
+    second_team_relation = models.ForeignKey(Team, related_name='second_team', null=True, on_delete=DO_NOTHING)
 
     first_team = models.CharField(max_length=256)
     second_team = models.CharField(max_length=256)

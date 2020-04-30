@@ -4,7 +4,7 @@ from crispy_forms import layout
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 
-from teams.models import Team
+from teams.models import Team, GameScore
 
 
 class TeamForm(forms.Form):
@@ -31,4 +31,22 @@ class TeamModelForm(ModelForm):
             'name': {
                 'unique': 'عذرا هذا الاسم مكرر, يرجى تغيير الاسم',
             }
+        }
+
+
+class ScoreModelForm(ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(ScoreModelForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper(self)
+        self.helper.add_input(Submit('submit', 'اضافة'))
+
+    class Meta:
+        model = GameScore
+        exclude = ['game_date'] # get all fields except game_date
+
+        labels = {
+            'first_team_relation': 'اسم الفريق الاول',
+            'second_team_relation': 'اسم الفريق الثاني',
+            'first_team_score': 'نتيجة الفريق الاول',
+            'second_team_score': 'نتيجة الفريق الثاني',
         }

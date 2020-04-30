@@ -27,6 +27,9 @@ class Player(models.Model):
 
 
 class GameScore(models.Model):
+    first_team_relation = models.ForeignKey(Team, related_name='first_team', null=True)
+    second_team_relation = models.ForeignKey(Team, related_name='second_team', null=True)
+
     first_team = models.CharField(max_length=256)
     second_team = models.CharField(max_length=256)
     first_team_score = models.IntegerField(default=0)

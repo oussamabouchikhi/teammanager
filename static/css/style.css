@@ -8,4 +8,5 @@ body {
 
 .container-fluid {
     direction: rtl;
+    text-align: right;
 }

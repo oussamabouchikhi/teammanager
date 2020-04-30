@@ -32,13 +32,10 @@ class Player(models.Model):
 class GameScore(models.Model):
     first_team_relation = models.ForeignKey(Team, related_name='first_team', null=True, on_delete=DO_NOTHING)
     second_team_relation = models.ForeignKey(Team, related_name='second_team', null=True, on_delete=DO_NOTHING)
-
-    first_team = models.CharField(max_length=256)
-    second_team = models.CharField(max_length=256)
     first_team_score = models.IntegerField(default=0)
     second_team_score = models.IntegerField(default=0)
     game_date = models.DateTimeField(auto_now=True)
 
     # example: ليفربول 0 - 3 ريال مدريد
     def __str__(self):
-        return '{} {} - {} {}'.format(self.first_team, self.first_team_score, self.second_team_score, self.second_team)
+        return '{} {} - {} {}'.format(self.first_team_relation.name, self.first_team_relation.name, self.second_team_score, self.second_team)

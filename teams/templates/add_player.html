@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-{% block title %} اضافة فريق {% endblock %}
+{% block title %} اضافة لاعب {% endblock %}
 
 {% block content %}
-    <form action="/add_team/" method="post">
+    <form action="/add_player/" method="post">
         {% csrf_token %}
         {{ form|crispy }}
         <input type="submit" value="اضافة">

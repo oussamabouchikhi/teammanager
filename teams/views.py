@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.views import View
 from django.views.generic import ListView, DetailView
 
-from teams.forms import TeamForm, TeamModelForm, ScoreModelForm
+from teams.forms import TeamForm, TeamModelForm, ScoreModelForm, PlayerModelForm
 from teams.models import Team, GameScore, Player
 
 
@@ -80,3 +80,21 @@ class AddTeamView(View):
         else:
             context = {'form': form}
             return render(request, 'add_team.html', context)
+
+
+class AddPlayerView(View):
+    def get(self, request):
+        form = PlayerModelForm()
+        context = {'form': form}
+        return render(request, 'add_player.html', context)
+
+    def post(self, request):
+        form = PlayerModelForm(request.POST)
+        # if form data are valid
+        if form.is_valid():
+            form.save()  # save data
+            return redirect('/')  # redirect to home after saving
+        # if form data are not valid
+        else:
+            context = {'form': form}
+            return render(request, 'add_player.html', context)

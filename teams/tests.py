@@ -39,3 +39,6 @@ class ViewsTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(self.team1, response.context['teams'])
         self.assertIn(self.team2, response.context['teams'])
+        self.assertTemplateUsed(response, 'team_list.html')
+        self.assertContains(response, self.team1.name)
+

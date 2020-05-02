@@ -1,7 +1,7 @@
 from django.test import TestCase
 
 # Create your tests here.
-from teams.models import Team
+from teams.models import Team, Player
 
 
 # Test models
@@ -12,6 +12,17 @@ class ModelTestCase(TestCase):
         team = Team.objects.create(name='فريقي', details="فريق الاختبار")
         # Check if team name is equal to the given name
         self.assertEqual(team.name, 'فريقي')
+
+    # Todo: implement player creation test
+    # Test if a team creation is running well
+    # def test_player_creation(self):
+    #     # Create a new player
+    #     player = Player.objects.create(name='اسامة', number=10, age=21, position_in_field="مهاجم", is_captain=False)
+    #     # Check if team name is equal to the given name
+    #     self.assertEqual(player.name, 'اسامة')
+    #     self.assertEqual(player.number, 10)
+    #     self.assertEqual(player.age, 21)
+    #     self.assertEqual(player.position_in_field, "مهاجم")
 
 
 # Test Views & URLs

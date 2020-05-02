@@ -28,6 +28,7 @@ class ModelTestCase(TestCase):
 # Test Views & URLs
 class ViewsTestCase(TestCase):
     def setUp(self):
+        self.team = Team.objects.create(name='فريقي', details="فريق الاختبار")
         self.team1 = Team.objects.create(name='الفريق الاول', details="الفريق الاول في القائمة")
         self.team2 = Team.objects.create(name='الفريق الثاني', details="الفريق الثاني في القائمة")
 
@@ -39,6 +40,10 @@ class ViewsTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(self.team1, response.context['teams'])
         self.assertIn(self.team2, response.context['teams'])
-        self.assertTemplateUsed(response, 'team_list.html')
+        self.assertTemplateUsed(response, 'teams_list.html')
         self.assertContains(response, self.team1.name)
 
+    def test_team_details_view(self):
+        response = self.client.get('/team/فريقي/')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(self.team, response.context['team'])

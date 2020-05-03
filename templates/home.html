@@ -1,14 +1,27 @@
-{% extends 'base.html' %}
-{% block title %} تسيير الفرق {% endblock %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <title>Design</title>
+    <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
+    <!-- Bootstrap  Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-{% block content %}
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
     <section class="landing">
       <div class="row justify-content-center align-items-center">
         <div class="col-sm-12 col-md-6">
           <h2 class="text-center">نتائج المباريات</h2>
         </div>
         <div class="col-sm-12 col-md-6">
-{#          <img src="./images/stats.svg" alt="">#}
+            <img class="icon-width" src="{% static 'images/stats.svg' %}" alt="score image">
         </div>
       </div>
     </section>
@@ -19,7 +32,7 @@
           <h2 class="text-center">اللاعبين</h2>
         </div>
         <div class="col-sm-12 col-md-6">
-{#          <img src="./images/player.svg" alt="">#}
+            <img class="icon-width" src="{% static 'images/player.svg' %}" alt="player image">
         </div>
       </div>
     </section>
@@ -30,7 +43,7 @@
           <h2 class="text-center">الفرق</h2>
         </div>
         <div class="col-sm-12 col-md-6">
-{#          <img src="./images/team2.svg" alt="">#}
+            <img class="icon-width" src="{% static 'images/team2.svg' %}" alt="team image">
         </div>
       </div>
     </section>
@@ -41,9 +54,10 @@
           <h2 class="text-center">نتائج المباريات</h2>
         </div>
         <div class="col-sm-12 col-md-6">
-{#          <img src="./images/score.svg" alt="">#}
+            <img class="icon-width" src="{% static 'images/score.svg' %}" alt="score image">
         </div>
       </div>
     </section>
 
-{% endblock %}
+  </body>
+</html>

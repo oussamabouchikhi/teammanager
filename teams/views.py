@@ -20,7 +20,7 @@ class HomePageView(View):
         context = {
             "teams": all_teams
         }
-        return render(request, 'teams_list.html', context)
+        return render(request, 'home.html', context)
 
 
 # Render teams using ListView class

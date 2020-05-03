@@ -1,0 +1,33 @@
+<svg width="863" height="769.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient y2="0" x2="0.500016" y1="1" x1="0.500016" id="4d7d6e59-78ed-4d57-a529-1eaaceade2ae">
+   <stop stop-opacity="0.25" stop-color="gray" offset="0"/>
+   <stop stop-opacity="0.12" stop-color="gray" offset="0.54"/>
+   <stop stop-opacity="0.1" stop-color="gray" offset="1"/>
+  </linearGradient>
+  <linearGradient xlink:href="#4d7d6e59-78ed-4d57-a529-1eaaceade2ae" y2="175.12" x2="583.59" x1="583.59" id="9d815349-9c86-443c-8ccb-e4f40929397c"/>
+  <linearGradient xlink:href="#4d7d6e59-78ed-4d57-a529-1eaaceade2ae" y2="118.5" x2="434" x1="434" id="4cdc3fff-77bb-4bd8-8d4b-e4a0e24ac1ff"/>
+  <linearGradient xlink:href="#4d7d6e59-78ed-4d57-a529-1eaaceade2ae" y2="23.5" x2="431.5" y1="426.5" x1="431.5" id="d789edb2-9260-4fe7-9b2e-c8d2cf1c50eb"/>
+ </defs>
+ <title>statistics</title>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <polygon id="svg_1" fill="url(#4d7d6e59-78ed-4d57-a529-1eaaceade2ae)" points="149.58 769.31 125 769.5 414.42 175.12 434.17 184.89 149.58 769.31"/>
+  <polygon id="svg_2" fill="url(#9d815349-9c86-443c-8ccb-e4f40929397c)" points="715.76 769.31 736 769.5 450.92 175.12 431.17 184.89 715.76 769.31"/>
+  <rect id="svg_3" fill="url(#4cdc3fff-77bb-4bd8-8d4b-e4a0e24ac1ff)" height="651" width="22" y="118.5" x="423"/>
+  <polygon id="svg_4" fill="#bdbdbd" points="149.58 764.31 125 764.5 414.42 174.69 434.17 184.38 149.58 764.31"/>
+  <polygon id="svg_5" fill="#bdbdbd" points="715.76 764.31 736 764.5 450.92 174.69 431.17 184.38 715.76 764.31"/>
+  <rect id="svg_6" fill="#bdbdbd" height="646" width="22" y="118.5" x="423"/>
+  <path id="svg_7" fill="#bdbdbd" d="m431.5,66a28,28 0 0 1 -28,-28l0,-10a28,28 0 0 1 56,0l0,10a28,28 0 0 1 -28,28zm0,-59a21,21 0 0 0 -21,21l0,10a21,21 0 0 0 42,0l0,-10a21,21 0 0 0 -21,-21z"/>
+  <rect id="svg_8" fill="url(#d789edb2-9260-4fe7-9b2e-c8d2cf1c50eb)" height="403" width="863" y="23.5"/>
+  <rect id="svg_9" fill="#bdbdbd" height="382" width="846" y="31" x="8.5"/>
+  <rect id="svg_10" fill="#fff" height="348" width="814" y="43" x="23.5"/>
+  <rect id="svg_24" fill="#e0e0e0" height="16" width="88" y="220.5" x="393"/>
+  <text transform="matrix(3.476580271566662,0,0,3.476580271566662,-256.00985317231755,-150.57215583514505) " font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="72" id="svg_37" y="127.651352" x="126.656115" stroke-width="0" fill="#2196f3">3</text>
+  <text transform="matrix(3.476580271566662,0,0,3.476580271566662,-256.00985317231755,-150.57215583514505) " font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="72" id="svg_39" y="128.514269" x="230.27221" stroke-width="0" fill="#2196f3">1</text>
+ </g>
+</svg>

@@ -3,8 +3,30 @@ This is the first project from [Web Development with Django](https://app.barmej.
 ![](https://img.shields.io/badge/-Barmej.com-%2354A3EC)
 ![](https://img.shields.io/badge/License-MIT-green)
 
+## Usage
+```bash
+// 1- Create a virtual environment
+~ virtualenv teammanager_env
+// 2- Activate the virtual environment
+(Mac)
+~  source teammanager_env/bin/activate
+(Windows)
+~  cd teammanager_env/Scripts
+~  activate
+~  cd ../..
+// 3- Change directory to the project folder
+~ cd teammanager
+// 4- Install dependecies from requirements.txt file
+~ pip install -r requirements.txt
+// 5- Check if all dependencies were installed successfully
+~ pip freeze
+// 6- Open teammanager folder with pycharm & select virtual environment python interpreter
+// 7- Run server
+~ python manage.py runserver
+```
+
 ## Contributing
 Pull request are welcome feel free to ```fork``` this repo.
 
-# License
+## License
 This project is open-sourced under the [MIT](https://opensource.org/licenses/MIT) license.

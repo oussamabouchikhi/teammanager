@@ -1,27 +1,30 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    {% load static %}
+<html lang="en" dir="rtl">
+
   <head>
     <meta charset="utf-8">
     <title>Design</title>
-    <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
+
     <!-- Bootstrap  Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+{#    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">#}
   </head>
   <body>
 
     <section class="landing">
       <div class="row justify-content-center align-items-center">
-        <div class="col-sm-12 col-md-6">
-          <h2 class="text-center">نتائج المباريات</h2>
+        <div class="col-sm-12">
+          <h1 class="text-center">
+              <a href="/">نظام إدارة فرق كرة القدم</a>
+          </h1>
         </div>
-        <div class="col-sm-12 col-md-6">
-            <img class="icon-width" src="{% static 'images/stats.svg' %}" alt="score image">
+        <div align="center" class="col-sm-12 banner">
+            <img class="" src="{% static 'images/score.svg' %}" alt="banner image">
         </div>
       </div>
     </section>
@@ -29,10 +32,12 @@
     <section class="about">
       <div class="row justify-content-center align-items-center">
         <div class="col-sm-12 col-md-6">
-          <h2 class="text-center">اللاعبين</h2>
+          <h2 class="text-center">
+              <a href="/add_player">اللاعبين</a>
+          </h2>
         </div>
         <div class="col-sm-12 col-md-6">
-            <img class="icon-width" src="{% static 'images/player.svg' %}" alt="player image">
+            <img class="" src="{% static 'images/player.svg' %}" alt="player image">
         </div>
       </div>
     </section>
@@ -40,10 +45,12 @@
     <section class="third">
       <div class="row justify-content-center align-items-center">
         <div class="col-sm-12 col-md-6">
-          <h2 class="text-center">الفرق</h2>
+            <img class="" src="{% static 'images/team2.svg' %}" alt="team image">
         </div>
         <div class="col-sm-12 col-md-6">
-            <img class="icon-width" src="{% static 'images/team2.svg' %}" alt="team image">
+          <h2 class="text-center">
+              <a href="/teams">الفرق</a>
+          </h2>
         </div>
       </div>
     </section>
@@ -51,10 +58,12 @@
     <section class="fourth">
       <div class="row justify-content-center align-items-center">
         <div class="col-sm-12 col-md-6">
-          <h2 class="text-center">نتائج المباريات</h2>
+          <h2 class="text-center">
+              <a href="/scores">نتائج المباريات</a>
+          </h2>
         </div>
         <div class="col-sm-12 col-md-6">
-            <img class="icon-width" src="{% static 'images/score.svg' %}" alt="score image">
+            <img class="" src="{% static 'images/stats.svg' %}" alt="score image">
         </div>
       </div>
     </section>

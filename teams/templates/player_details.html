@@ -11,8 +11,8 @@
         <h2> {{ player.name }} من {{ player.team }} </h2>
     {% endif %}
 
-    <h3> {{ player.number }} رقم اللاعب </h3>
-    <h3> {{ player.age }} عمر اللاعب </h3>
+    <h3> رقم اللاعب {{ player.number }}  </h3>
+    <h3> عمر اللاعب {{ player.age }} </h3>
     <h3> الموقع {{ player.get_position_in_field_display }} </h3>
 
 {% endblock %}

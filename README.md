@@ -7,6 +7,8 @@ This is the first project from [Web Development with Django](https://app.barmej.
 - Add a new team
 - Add a new player
 - Add a game score between two teams
+- Show players & teams details
+- Show games scores
 - **(TDD tests for)** Team creation & (team details/list) views & URL's
 
 ## Usage

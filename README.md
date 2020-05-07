@@ -11,7 +11,38 @@ This is the first project from [Web Development with Django](https://app.barmej.
 - Show games scores
 - **(TDD tests for)** Team creation & (team details/list) views & URL's
 
+## Screenshots
+<h4 align="center">welcome page</h4>
+<p align="center"><img align="center" src="./screenshots/welcome_page.png" width="80%"/></p>
+<table>
+    <tr>
+      <th>add player</th>
+      <th>add team</th>
+    </tr>
+    <tr>
+      <td width="400px"><img src="./screenshots/add_player.png" width="100%" /></td>
+      <td><img src="./screenshots/add_team.png" width="100%" /></td>
+    </tr>
+    <tr>
+      <th>player details</th>
+      <th>team details</th>
+    </tr>
+    <tr>
+      <td><img src="./screenshots/player_details.png" width="100%" /></td>
+      <td><img src="./screenshots/team_details.png" width="100%" /></td>
+    </tr>
+    <tr>
+      <th>games scores</th>
+      <th>teams list</th>
+    </tr>
+    <tr>
+      <td><img src="./screenshots/games_scores.png" width="100%" /></td>
+      <td><img src="./screenshots/teams_list.png" width="100%" /></td>
+    </tr>
+</table>
+
 ## Usage
+
 ```bash
 // 1- Create a virtual environment
 ~ virtualenv teammanager_env

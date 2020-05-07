@@ -41,6 +41,14 @@ This is the first project from [Web Development with Django](https://app.barmej.
     </tr>
 </table>
 
+## Tools & Languages
+- HTML5
+- CSS3
+- Bootstrap4.4
+- [Cripy forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
+- Django
+- VSCode
+
 ## Usage
 
 ```bash
